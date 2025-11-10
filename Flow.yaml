@@ -1,0 +1,29 @@
+appId: com.starry.greenstash
+name: "1. Successful Onboarding Flow"
+
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: true
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+ 
+ # Handle initial onboarding
+- assertVisible: "Get Started!"
+- tapOn: "Get Started!"
+- tapOn:
+    point: "76%,92%"
+
+- assertVisible: "New Goal"
+- tapOn: "New Goal"
+- assertVisible: "Goal Image"
+- tapOn: "Goal Image"
+- assertVisible: "Select icon for your goal"
+- tapOn: "Select icon for your goal"
+- tapOn:
+    point: "81%,78%"
+- assertVisible: "It's time to save!"
+
+
