@@ -1,5 +1,5 @@
 appId: com.starry.greenstash
-name: "1. Successful Onboarding Flow"
+name: "1. Successful Onboarding Flow and set currencies"
 
 ---
 - launchApp:
@@ -10,12 +10,19 @@ name: "1. Successful Onboarding Flow"
       notifications: allow
       android.permission.ACCESS_FINE_LOCATION: deny
  
- # Handle initial onboarding
+ # Handle get started screen and set currency
+- assertVisible: US Dollar ($)
+- tapOn: US Dollar ($)
+- tapOn: "Search currency"
+- inputText: "indonesia"
+- tapOn: "Indonesian Rupiah (Rp)"
+- tapOn: "Confirm"
 - assertVisible: "Get Started!"
 - tapOn: "Get Started!"
 - tapOn:
     point: "76%,92%"
 
+# Handle initial onboarding
 - assertVisible: "New Goal"
 - tapOn: "New Goal"
 - assertVisible: "Goal Image"

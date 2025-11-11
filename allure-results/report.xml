@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites>
+  <testsuite name="Test Suite" device="25e3e780bf0d7ece" tests="1" failures="0" time="53.0">
+    <testcase id="1. Successful Onboarding Flow and set currencies" name="1. Successful Onboarding Flow and set currencies" classname="1. Successful Onboarding Flow and set currencies" time="53.0" status="SUCCESS"/>
+  </testsuite>
+</testsuites>
