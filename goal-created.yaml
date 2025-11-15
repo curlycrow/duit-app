@@ -1,0 +1,40 @@
+appId: com.starry.greenstash
+name: "2. Goal Creation Flow"
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: false
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+# Navigate to create a new goal
+- assertVisible: "New Goal"
+- tapOn: "New Goal"
+# Fill in goal details
+- assertVisible: "Goal Image"
+- tapOn: "Goal Image"
+- assertVisible: "Select icon for your goal"
+- tapOn: "Select icon for your goal"
+- tapOn:
+    point: "45%,30%"
+- inputText: "Vacation Fund"
+- tapOn: "Next"
+- inputText: "5000"
+- tapOn: "Next"
+- assertVisible: "Set a deadline for your goal"
+- inputText: "12/31/2024"
+- tapOn: "Next"
+- assertVisible: "It's time to save!"
+- tapOn: "Start Saving"
+- assertVisible: "Vacation Fund"
+- assertVisible: "5000 Rp"
+- assertVisible: "12/31/2024"
+- assertVisible: "Goal created successfully!"
+- tapOn:
+    point: "76%,92%"
+# End of goal creation flow
+- closeApp:
+    appId: "com.starry.greenstash"
+
+    
