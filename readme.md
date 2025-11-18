@@ -11,9 +11,6 @@ Install dependencies
 
 
 
-
-
-
 Open in browser (replace port as configured)
 ```bash
 # on browser

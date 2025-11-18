@@ -14,27 +14,43 @@ name: "2. Goal Creation Flow"
 # Fill in goal details
 - assertVisible: "Goal Image"
 - tapOn: "Goal Image"
+- tapOn:
+    id: com.google.android.gms.optional_photopicker:id/icon_thumbnail
+    index: 6
 - assertVisible: "Select icon for your goal"
 - tapOn: "Select icon for your goal"
 - tapOn:
     point: "45%,30%"
+
+- scrollUntilVisible:
+      element:
+        text: "Goal Title"
+      direction: DOWN
+      timeout: 10000
+      speed: 50
+- tapOn: "Goal Title"
 - inputText: "Vacation Fund"
-- tapOn: "Next"
+- tapOn: "Target Amount"
 - inputText: "5000"
-- tapOn: "Next"
-- assertVisible: "Set a deadline for your goal"
-- inputText: "12/31/2024"
-- tapOn: "Next"
-- assertVisible: "It's time to save!"
-- tapOn: "Start Saving"
+- tapOn: "Done"
+#- scroll
+- scrollUntilVisible:
+      element:
+        text: "Deadline (Optional)"
+      direction: DOWN
+      timeout: 10000
+      speed: 50
+- tapOn: "Deadline (Optional)"
+- tapOn: "30"
+- tapOn: "Ok"
+- tapOn: "Set New Saving Goal"
 - assertVisible: "Vacation Fund"
-- assertVisible: "5000 Rp"
-- assertVisible: "12/31/2024"
-- assertVisible: "Goal created successfully!"
-- tapOn:
-    point: "76%,92%"
+- assertVisible: "You're off to great start!
+    Currently saved IDR0 out of IDR5,000"
+- assertVisible: "You have until 30/11/2025 (12) days left
+    You need to save around IDR417/day"
+
 # End of goal creation flow
-- closeApp:
-    appId: "com.starry.greenstash"
+
 
     
