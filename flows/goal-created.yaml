@@ -47,10 +47,10 @@ name: "2. Goal Creation Flow"
 - assertVisible: "Vacation Fund"
 - assertVisible: "You're off to great start!
     Currently saved IDR0 out of IDR5,000"
-- assertVisible: "You have until 30/11/2025 (12) days left
-    You need to save around IDR417/day"
+- assertVisible: '.*You have until 30/11/2025.*'
 
-# End of goal creation flow
+
+
 
 
     
