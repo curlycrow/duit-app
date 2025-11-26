@@ -1,0 +1,33 @@
+appId: com.starry.greenstash
+name: "2. Successful One-time Deposit Flow"
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: false
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+
+# Navigate to One-time Deposit screen
+- assertVisible: "DEPOSIT"
+- tapOn: "DEPOSIT"
+
+- assertVisible: "Awesome! Enter amount"
+# Perform One-time Deposit
+- tapOn: "Amount"
+- inputText: "50000"
+- tapOn: "Notes (Optional)"
+- inputText: " dapet angpao"
+- assertVisible: "Deposit"
+- tapOn: "Deposit"
+- waitForAnimationToEnd:
+    #visible: "Deposit successfully!" # or any other selector
+    timeout: 100000      # Timeout in milliseconds
+# Verify Deposit Summary and Confirm
+
+
+- assertVisible: '.*Currently saved IDR50,000.*'
+- tapOn: "View goal information"
+- assertVisible: "IDR50,000"
+
