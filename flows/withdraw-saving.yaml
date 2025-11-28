@@ -21,6 +21,10 @@ name: "3. Successful Withdraw Saving Flow"
 - inputText: " butuh jajan"
 - assertVisible: "Withdraw"
 - tapOn: "Withdraw"
+
+- extendedWaitUntil:
+    timeout: 10000
+    notVisible: "Withdraw successfully!" # or any other selector
  
 # Verify Withdraw Summary and Confirm
 - assertVisible: '.*Currently saved IDR30,000.*'
