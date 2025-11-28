@@ -1,0 +1,40 @@
+appId: com.starry.greenstash
+name: "4. Edit Saving Goal Flow"
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: false
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+
+# Navigate to Edit Saving Goal screen
+- tapOn: "Edit this goal"
+- assertVisible: "Edit Saving Goal"
+- assertVisible: "baru"
+
+# Perform Edit Saving Goal
+- tapOn: "baru"
+- eraseText
+
+- inputText: "Liburan ke Bali" 
+- tapOn: "100000.0"
+- eraseText
+- tapOn: "Target Amount"
+- inputText: "1500000"
+- tapOn: "Done"
+- scrollUntilVisible:
+      element:
+        text: "Update Saving Goal"
+      direction: DOWN
+      timeout: 10000
+      speed: 50
+- assertVisible: "Update Saving Goal"
+- tapOn: "Update Saving Goal"
+- extendedWaitUntil:
+    notVisible: "Saving Goal Updated" 
+    timeout: 100000      
+# Verify Edited Saving Goal
+- assertVisible: '.*Liburan ke Bali.*'
+- assertVisible: '.*IDR1,500,000.*'
