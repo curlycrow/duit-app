@@ -1,0 +1,28 @@
+appId: com.starry.greenstash
+name: "3. Successful Withdraw Saving Flow"
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: false
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+
+# Navigate to Withdraw Saving screen
+- assertVisible: "WITHDRAW"
+- tapOn: "WITHDRAW"
+- assertVisible: "Cool! Enter amount"
+# Perform Withdraw Saving
+- tapOn: "Amount"
+- inputText: "20000"
+
+- tapOn: "Notes (Optional)"
+- inputText: " butuh jajan"
+- assertVisible: "Withdraw"
+- tapOn: "Withdraw"
+ 
+# Verify Withdraw Summary and Confirm
+- assertVisible: '.*Currently saved IDR30,000.*'
+- tapOn: "View goal information"
+- assertVisible: "IDR30,000"
