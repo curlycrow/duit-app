@@ -16,7 +16,7 @@ name: "2. Goal Creation Flow"
 - tapOn: "Goal Image"
 - tapOn:
     id: com.google.android.gms.optional_photopicker:id/icon_thumbnail
-    index: 6
+    index: 3
 - assertVisible: "Select icon for your goal"
 - tapOn: "Select icon for your goal"
 - tapOn:

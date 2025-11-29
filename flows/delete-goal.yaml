@@ -1,0 +1,16 @@
+appId: com.starry.greenstash
+name: "5. Delete Goal Flow"
+---
+- launchApp:
+    appId: "com.starry.greenstash"
+    clearState: false
+    stopApp: true
+    permissions:
+      notifications: allow
+      android.permission.ACCESS_FINE_LOCATION: deny
+# Navigate to Delete Goal screen
+- assertVisible: "Vacation Fund"
+- tapOn: "Delete This Goal"
+- assertVisible: "Are you sure?"
+- tapOn: "Confirm"
+- assertVisible: "Deleted Successfully"
