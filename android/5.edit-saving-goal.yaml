@@ -1,5 +1,5 @@
 appId: com.starry.greenstash
-name: "4. Edit Saving Goal Flow"
+name: "5. Edit Saving Goal Flow"
 ---
 - launchApp:
     appId: "com.starry.greenstash"
@@ -12,14 +12,14 @@ name: "4. Edit Saving Goal Flow"
 # Navigate to Edit Saving Goal screen
 - tapOn: "Edit this goal"
 - assertVisible: "Edit Saving Goal"
-- assertVisible: "baru"
+- assertVisible: "Vacation Fund"
 
 # Perform Edit Saving Goal
-- tapOn: "baru"
+- tapOn: "Vacation Fund"
 - eraseText
+- inputText: "Liburan ke Bali"
 
-- inputText: "Liburan ke Bali" 
-- tapOn: "100000.0"
+- tapOn: "500000.0"
 - eraseText
 - tapOn: "Target Amount"
 - inputText: "1500000"

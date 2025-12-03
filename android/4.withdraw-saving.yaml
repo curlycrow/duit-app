@@ -1,5 +1,5 @@
 appId: com.starry.greenstash
-name: "3. Successful Withdraw Saving Flow"
+name: "4. Successful Withdraw Saving Flow"
 ---
 - launchApp:
     appId: "com.starry.greenstash"

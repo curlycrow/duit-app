@@ -31,7 +31,7 @@ name: "2. Goal Creation Flow"
 - tapOn: "Goal Title"
 - inputText: "Vacation Fund"
 - tapOn: "Target Amount"
-- inputText: "5000"
+- inputText: "500000"
 - tapOn: "Done"
 #- scroll
 - scrollUntilVisible:
@@ -46,8 +46,8 @@ name: "2. Goal Creation Flow"
 - tapOn: "Set New Saving Goal"
 - assertVisible: "Vacation Fund"
 - assertVisible: "You're off to great start!
-    Currently saved IDR0 out of IDR5,000"
-- assertVisible: '.*You have until 30/11/2025.*'
+    Currently saved IDR0 out of IDR500,000"
+- assertVisible: '.*You have until 30/12/2025.*'
 
 
 

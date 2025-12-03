@@ -1,5 +1,5 @@
 appId: com.starry.greenstash
-name: "2. Successful One-time Deposit Flow"
+name: "3. Successful One-time Deposit Flow"
 ---
 - launchApp:
     appId: "com.starry.greenstash"
