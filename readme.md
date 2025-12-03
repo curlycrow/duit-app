@@ -28,7 +28,7 @@ adb devices
 get report from test run
 ```bash
 
-maestro test --format hmtl yourflow.yaml
+maestro test --format HTML yourflow.yaml
 
 ```
 
